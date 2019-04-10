@@ -94,10 +94,8 @@ class model():
             chisq = chisq + self.chi_h(*args)
         if 'panth' in combination:
             chisq = chisq + self.chi_panth(*args)
-        if 'bao1' in combination:
-            chisq = chisq + self.chi_bao1(*args)
-        if 'bao2' in combination:
-            chisq = chisq + self.chi_bao2(*args)
+        if 'bao' in combination:
+            chisq = chisq + self.chi_bao(*args)
         if 'masers' in combination:
             chisq = chisq + self.chi_masers(*args)
         if 'fs8' in combination:
