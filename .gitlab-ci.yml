@@ -1,0 +1,15 @@
+image: python:3.7
+
+before_script:
+  - python -V 
+
+stages:
+  - test
+
+test_cosmopass:
+  stage: test
+  script:
+    - apt-get update -q -y
+    - pip install -r requirements.txt
+    - python -m unittest discover -s "./tests/"
+
