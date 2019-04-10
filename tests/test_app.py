@@ -1,5 +1,5 @@
 import unittest
-from cosmopass.likelihoods.chisqaures import model
+from cosmopass.likelihoods.chisquares import model
 
 
 class AppTests(unittest.TestCase):
