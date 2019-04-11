@@ -58,8 +58,27 @@ lcdm.chi_bao(.3,147,.7,5,.8)
 
 #For computing combination of different chi_sq like h+bao+jla
 lcdm.chi_list = ["h","bao","jla"]
-lcdm.chi_sq(.3,147,.7,5,.8) 
+lcdm.chi_sq(.3,147,.7,5,.8)
+
+#If you want to use quasar you need to add to parameters 'm' and 'delta' specified in Risaliti.et al
+lcdm.chi_qso(.3, 147, .7, 5, .8, 0, 1.3)
+
+#Or if the combination has qso
+lcdm.chi_list = ["h","bao","qso"]
+lcdm.chi_sq(.3, 147, .7, 5, .8, 0, 1.3) # since the combination has 'qso', you have to provide 'm' and 'delta'
+
+#VERY IMPORTANT THING TO REMEMBER
+#the flexibility of likelihoods is achived using *args
+#hat does it means?
+#ikelihood does't care of the order of parameters it silently passes to parent definitions.
+#hich means; (0.3,147,.7,5,.8) is not equal to (0.3,.7,147,5,.8) ORDER MATTERS. 
+#For confirming the order you can always check the 'Params' as shown in the above lines
+#Since it is not using **kwargs passing the arguments by assignment(Om0=.3,rd=147) won't work
+
+
 ```
+
+
 
 ## Keywords
 Available Models:
