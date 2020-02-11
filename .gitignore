@@ -2,4 +2,5 @@
 __pycache__/
 *.py[cod]
 .hope.3.7/
+.ipynb_checkpoints/
 
